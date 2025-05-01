@@ -1,6 +1,5 @@
-# learningReact-pokedex
+# learningReact-pokédex
  
-Pokédex
 
 This project is a simple **Pokédex** web application built with **React** and **Vite**. It allows users to browse through the first 151 Pokémon, view their stats, types, moves, and images, and search for specific Pokémon by name or Pokédex number. Learnt to build this with the help of [Smoljames' Tutorial](https://www.youtube.com/@Smoljames)
 

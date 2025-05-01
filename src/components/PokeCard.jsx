@@ -28,18 +28,18 @@ export default function PokeCard(props){
 
     if(move in c){
       setSkill(c[move])
-      console.log('found pokemon in cache')
       return
     }
 
     try {
       setLoadingSkill(true)
       const res = await fetch(moveUrl)
-      console.log(moveUrl)
       const moveData = await res.json()
-      const description = moveData?.flavor_text_entries.filter(val => {
-        return val.version_group.name === 'firered-leafgreen'
-      })[0]?.flavor_text
+      const flavorEntry = moveData?.flavor_text_entries.find(
+        (entry) => entry.language.name === 'en'
+      )
+      const description = flavorEntry?.flavor_text || "No description available."
+      
 
       const skillData={
         name: move,
@@ -111,11 +111,9 @@ export default function PokeCard(props){
       {skill && (<Modal handleCloseModal={() => { setSkill(null)
       }}>
         <div>
-          <h6>Name</h6>
           <h2 className="skill-name">{skill.name.replaceAll('-', ' ')}</h2>
         </div>
         <div>
-          <h6>Description</h6>
           <p>{skill.description}</p>
         </div>
       </Modal>

@@ -51,3 +51,4 @@ This project is a simple **Pokédex** web application built with **React** and *
    - Pokémon data and move descriptions are cached in `localStorage` to reduce API calls and improve performance.
 
 ---
+Also learnt how to deploy using Netlify.

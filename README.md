@@ -1,0 +1,2 @@
+# learningReact-pokedex
+ 

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Eczar:wght@400..800&display=swap');
+
+:root {
+    --background-primary: #1f2933;
+    --background-secondary: #323f4b;
+    --background-tertiary: #3e4c59;
+    --background-accent: #000000;
+    --background-muted: #e4e7eb;
+        --color-secondary: #7308ff;
+    --background-gradient: linear-gradient(135deg, #7308ff 50%, #d20617 100%);
+
+    --color-primary: #ffffff;
+    --color-secondary: #d20617;
+    --color-accent: #bc6bff;
+    --color-highlight: #5e7eff;
+    --color-link: #ffe066;
+    --color-link-transparent: rgba(255, 224, 102, 0.1);
+
+    --gradient-start: #f4f4f8;
+    --gradient-end: #d9e2ec;
+
+    --border-primary: #000000;
+    --border-secondary: #cd0b0b;
+    --border-highlight: #000000;
+
+    --shadow-dark: rgba(0, 0, 0, 0.25);
+
+    --padding-small: 1rem;
+    --padding-large: 2rem;
+
+    --border-radius-small: 0.5rem;
+    --border-radius-large: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-primary: linear-gradient(135deg, #7308ff 100%, #7308ff 100%);
+
+        --background-secondary: #0870f0;
+        --background-tertiary: #007bff;
+        --background-muted:#fa15b996;
+
+        --color-primary: #ffffff;
+        --color-secondary: #7308ff;
+        --color-accent: #ff6b6b;
+        --color-highlight: #45a29e;
+        --color-link: #ffe066;
+        --color-link-transparent: rgba(255, 224, 102, 0.15);
+
+        --border-primary: #3d3d3d;
+        --border-secondary: #66fcf1;
+        --border-highlight: #ff6b6b;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Eczar', serif;
+}
+
+body {
+    background: var(--background-primary);
+    color: var(--color-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    background-image: var(--background-gradient);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+}
+
+.text-gradient {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+a:hover {
+    color: var(--color-accent);
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: 3px solid var(--border-highlight);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-small);
+    font-weight: bold;
+    box-shadow: 2px 2px 0 var(--border-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ffffff; /* replace with your desired color */
+  opacity: 1;     /* optional: ensures full opacity in some browsers */
+}
+
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.card, .button-card {
+    background-color: var(--background-muted);
+    color: var(--color-primary);
+    padding: 1rem;
+    border: 2px solid var(--border-secondary);
+    border-radius: var(--border-radius-large);
+    box-shadow: 3px 3px var(--shadow-dark);
+}
+
+input, textarea, select {
+    border: 2px solid var(--border-secondary);
+    background: var(--background-muted);
+    color: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-small);
+}
+
+code, pre {
+    background-color: var(--background-muted);
+    border: 1px solid var(--border-primary);
+    font-family: monospace;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-small);
+    color: #ff3860;
+}
+
+blockquote {
+    border-left: 5px solid var(--border-highlight);
+    background-color: var(--background-muted);
+    padding: 1rem;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+table {
+    border: 2px solid var(--border-secondary);
+    background: white;
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--background-secondary);
+    color: #fff;
+    padding: 0.75rem;
+}
+
+td {
+    background-color: var(--background-primary);
+    padding: 0.75rem;
+    border-top: 1px solid var(--border-primary);
+}
+
+details {
+    border: 1px dashed var(--border-highlight);
+    background: var(--background-muted);
+    padding: 1rem;
+    border-radius: var(--border-radius-small);
+}
+
+summary {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
